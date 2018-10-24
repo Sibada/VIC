@@ -305,6 +305,7 @@ qromb(double (*funcd)(),
         h[j + 1] = 0.25 * h[j];
     }
     log_err("Too many steps");
+    return 0.; // To avoid warnings.
 }
 
 /******************************************************************************
@@ -409,6 +410,7 @@ trapzd(double (*funcd)(),
         s = 0.5 * (s + (b - a) * sum / tnm);
         return s;
     }
+    return 0.; // To avoid warnings.
 }
 
 /******************************************************************************
@@ -484,6 +486,7 @@ rtnewt(double x1,
         }
     }
     log_err("Maximum number of iterations exceeded");
+    return 0.; // To avoid warnings.
 }
 
 /******************************************************************************
